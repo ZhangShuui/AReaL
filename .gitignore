@@ -184,3 +184,6 @@ api_key.json
 wandb/
 outputs/
 sympy/
+
+*.out
+experiments/

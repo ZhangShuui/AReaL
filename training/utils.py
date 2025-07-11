@@ -140,7 +140,10 @@ def _run_experiment(exp_cfg, expr_name, trial_name):
     runtime_env = {
         "env_vars": env_vars,
         "working_dir": os.getcwd(),
-        "excludes": [str(git_path)],
+        "excludes": [
+            str(git_path),
+            "*.safetensors",  # any stray weights
+        ],
     }
     logger.info(f"Ray workers runtime env: {runtime_env}")
     ray_log_path = exp_cfg.ray_temp_path
