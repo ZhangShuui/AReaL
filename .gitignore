@@ -187,3 +187,4 @@ sympy/
 
 *.out
 experiments/
+sglang/*
